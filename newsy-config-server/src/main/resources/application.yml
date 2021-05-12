@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: config-server
+  profiles:
+    active:
+      - native, git    #A
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config
+        git:    #B
+          uri: https://github.com/DominikHruza/newsy-config-files    #C
+          searchPaths: config-files    #D
+server:
+  port: 9000
