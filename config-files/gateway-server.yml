@@ -14,6 +14,8 @@ spring:
             discovery.locator:
                 enabled: true
                 lowerCaseServiceId: true
+            filter:
+                - RemoveRequestHeader= Cookie,Set-Cookie
 management:
     endpoints:
         web:
